@@ -1,0 +1,14 @@
+
+public class Main {
+	
+	public static void Main(String[] args) {
+		
+		double x = 10.35784;
+		int y = 67;
+		IO.println(x);
+		IO.println(y);
+		System.out.printf("%.2f%n", x);
+		IO.println("Ola Mundo");
+		
+	}
+}
