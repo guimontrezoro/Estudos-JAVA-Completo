@@ -1,0 +1,29 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		
+		double pi, raio, A, raioC;
+		
+		pi = 3.14159;
+		
+		raio = sc.nextDouble();
+		
+		raioC = Math.pow(raio, 2);
+		
+		A = pi * raioC;
+		
+		System.out.printf("%.4f", A);
+		
+	sc.close();
+	
+	}
+}
+         
+         

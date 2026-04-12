@@ -1,0 +1,36 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		double a, b, c;
+		double areatr, areacirc, areatrap, areaquad, arearet;
+		
+		a = sc.nextDouble();
+		b = sc.nextDouble();
+		c = sc.nextDouble();
+		
+		
+		areatr = (a*c) / 2;
+		areacirc = c * 3.14159;
+		areatrap = ( (a + b) * c) / 2;
+		areaquad = b * b;
+		arearet = a * b;
+		
+		System.out.printf("TRIANGULO: %.3f", areatr);
+		System.out.printf("CIRCULO: %.3f", areacirc);
+		System.out.printf("TRAPEZIO: %.3f", areatrap);
+		System.out.printf("QUADRADO: %.3f", areaquad);
+		System.out.printf("RETANGULO: %.3f", arearet);
+		
+	sc.close();
+	
+	}
+}
+         
+         
