@@ -1,0 +1,12 @@
+# Java
+*.class
+
+# Pastas geradas
+bin/
+.metadata/
+
+# VS Code
+.vscode/
+
+# Eclipse
+.settings/
