@@ -1,8 +1,0 @@
-void main() {
-	
-	int y = 32; 
-	double x = 10.35784;
-	IO.println("Ola mundo");
-	IO.println(y);
-	IO.printf("%.2f", x);
-}
