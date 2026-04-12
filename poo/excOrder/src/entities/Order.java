@@ -9,21 +9,21 @@ import entities.enums.OrderStatus;
 
 public class Order {
 
-    private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss"); // mantido: apesar de não ser obrigatório, deixei porque já existia
+    private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
     private Date moment;
     private OrderStatus status;
-    private Client client; // corrigido: o diagrama mostra que Order tem um Client associado
+    private Client client; 
 
     private List<Orderitem> items = new ArrayList<>();
 
     public Order() {
     }
 
-    public Order(OrderStatus status, Client client) { // corrigido: construtor agora recebe status e client
-        this.moment = new Date(); // corrigido: instante do pedido deve ser o instante do sistema
+    public Order(OrderStatus status, Client client) {
+        this.moment = new Date(); 
         this.status = status;
-        this.client = client; // corrigido: associa o cliente ao pedido
+        this.client = client; 
     }
 
     public SimpleDateFormat getSdf() {
@@ -50,11 +50,11 @@ public class Order {
         this.status = status;
     }
 
-    public Client getClient() { // corrigido: getter do client
+    public Client getClient() {
         return client;
     }
 
-    public void setClient(Client client) { // corrigido: setter do client
+    public void setClient(Client client) {
         this.client = client;
     }
 

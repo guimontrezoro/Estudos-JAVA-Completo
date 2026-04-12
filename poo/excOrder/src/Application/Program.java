@@ -40,7 +40,7 @@ public class Program {
             System.out.print("Status: ");
             OrderStatus status = OrderStatus.valueOf(sc.nextLine());
 
-            Order order = new Order(status, client); // corrigido: o momento do pedido deve vir do sistema, e o pedido deve guardar o client
+            Order order = new Order(status, client); // momento do pedido vem do sistema, e o pedido guarda o client
 
             System.out.print("How many items to this order? ");
             int n = sc.nextInt();
@@ -56,8 +56,8 @@ public class Program {
                 quantity = sc.nextInt();
                 sc.nextLine();
 
-                Product product = new Product(name, price); // corrigido: agora o product é criado dentro do laço para cada item
-                Orderitem orderitem = new Orderitem(quantity, price, product); // corrigido: cada item agora guarda o product correspondente
+                Product product = new Product(name, price); // product é criado para cada item
+                Orderitem orderitem = new Orderitem(quantity, price, product); // cada item guarda o product correspondente
                 order.addItem(orderitem);
             }
 
@@ -66,19 +66,19 @@ public class Program {
 
             System.out.println("Order moment: " + sdf1.format(order.getMoment()));
             System.out.println("Order status: " + order.getStatus());
-            System.out.println("Client: " + order.getClient().getClientName() + " (" // corrigido: client agora está associado ao order
+            System.out.println("Client: " + order.getClient().getClientName() + " (" // client associado ao order
                     + sdf.format(order.getClient().getBirthDate()) + ") - "
                     + order.getClient().getEmail());
             System.out.println("Order Items: \n");
 
-            for (Orderitem item : order.getitemsList()) { // corrigido: agora percorre a lista real de itens do pedido
-                System.out.println(item.getProduct().getName() + ", $" // corrigido: pega o nome do product armazenado dentro de cada item
-                        + String.format("%.2f", item.getPrice()) + ", Quantity: " // corrigido: formatação com 2 casas decimais
+            for (Orderitem item : order.getitemsList()) { // percorre a lista real de itens do pedido
+                System.out.println(item.getProduct().getName() + ", $" // pega o nome do product armazenado dentro de cada item
+                        + String.format("%.2f", item.getPrice()) + ", Quantity: " 
                         + item.getQuantity() + ", Subtotal: $"
-                        + String.format("%.2f", item.subTotal())); // corrigido: imprime o subtotal de cada item da lista
+                        + String.format("%.2f", item.subTotal())); 
             }
 
-            System.out.println("Total price: $" + String.format("%.2f", order.total())); // corrigido: formatação com 2 casas decimais
+            System.out.println("Total price: $" + String.format("%.2f", order.total()));
         }
     }
 }
