@@ -40,7 +40,7 @@ public class Program {
             System.out.print("Status: ");
             OrderStatus status = OrderStatus.valueOf(sc.nextLine());
 
-            Order order = new Order(status, client); // momento do pedido vem do sistema, e o pedido guarda o client
+            Order order = new Order(status, client); 
 
             System.out.print("How many items to this order? ");
             int n = sc.nextInt();
