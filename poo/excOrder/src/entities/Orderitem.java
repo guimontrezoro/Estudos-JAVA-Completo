@@ -4,15 +4,15 @@ public class Orderitem {
 
     private Integer quantity;
     private Double price;
-    private Product product; // corrigido: cada Orderitem precisa guardar o product correspondente
+    private Product product; // cada Orderitem precisa guardar o product correspondente
 
     public Orderitem() {
     }
 
-    public Orderitem(Integer quantity, Double price, Product product) { // corrigido: construtor agora recebe também o product
+    public Orderitem(Integer quantity, Double price, Product product) {
         this.quantity = quantity;
         this.price = price;
-        this.product = product; // corrigido: armazena o product do item
+        this.product = product; 
     }
 
     public Integer getQuantity() {
@@ -27,15 +27,15 @@ public class Orderitem {
         return price;
     }
 
-    public void setPrice(Double price) { // corrigido: adicionado setter do price para completar a classe
+    public void setPrice(Double price) { 
         this.price = price;
     }
 
-    public Product getProduct() { // corrigido: getter do product
+    public Product getProduct() { 
         return product;
     }
 
-    public void setProduct(Product product) { // corrigido: setter do product
+    public void setProduct(Product product) { 
         this.product = product;
     }
 
